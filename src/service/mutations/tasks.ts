@@ -1,12 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 
 import { ITask } from "@/types/task";
-import {
-  createTask,
-  deleteTask,
-  toggleTask,
-  updateTask,
-} from "../task-service";
+import { createTask, deleteTask, toggleTask } from "../task-service";
 import { browserQueryClient } from "../query-client";
 
 export const useCreateTaskMutation = () =>
@@ -34,17 +29,6 @@ export const useDeleteTaskMutation = () =>
 export const useToggleTaskMutation = () =>
   useMutation({
     mutationFn: (task: ITask) => toggleTask(task),
-    onSuccess: () => {
-      browserQueryClient?.invalidateQueries({
-        queryKey: ["tasks"],
-      });
-    },
-    onError: () => {},
-  });
-
-export const useUpdateTaskMutation = () =>
-  useMutation({
-    mutationFn: (task: ITask) => updateTask(task),
     onSuccess: () => {
       browserQueryClient?.invalidateQueries({
         queryKey: ["tasks"],
