@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import variables from "./variables.module.scss";
 import "./globals.scss";
+import QueryProvider from "@/providers/query-provider";
 
 const fontSans = Inter_Tight({
   subsets: ["latin"],
@@ -25,9 +26,9 @@ export default function RootLayout({
         style={{
           background: variables.white,
         }}
-        className={`${fontSans.className} antialiased`}
+        className={`${fontSans.className}`}
       >
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );

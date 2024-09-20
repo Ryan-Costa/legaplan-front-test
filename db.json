@@ -1,19 +1,24 @@
 {
-    "tasks": [
-      {
-        "id": "1",
-        "title": "Buy groceries",
-        "done": false
-      },
-      {
-        "id": "2",
-        "title": "Clean the house",
-        "done": true
-      },
-      {
-        "id": "3",
-        "title": "Prepare presentation for meeting",
-        "done": false
-      }
-    ]
-  }
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Buy groceries",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Buy groceries",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "Buy groceries",
+      "completed": true
+    },
+    {
+      "id": "85df",
+      "title": "teste",
+      "completed": true
+    }
+  ]
+}
