@@ -1,0 +1,26 @@
+@import '../../app/variables.module.scss';
+
+.buttonCreate {
+    background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+    color: $white;
+}
+
+.buttonDelete {
+    background: linear-gradient(90deg, #D30707 0%, #F05353 68.65%);
+    color: $white;
+}
+
+.buttonCancel {
+    background-color: $secondary-color;
+    color: $black;
+}
+
+.button {
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    width: 100%;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    border-radius: 0.5rem;
+}

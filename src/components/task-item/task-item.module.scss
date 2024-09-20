@@ -1,0 +1,80 @@
+@import '../../app/variables.module.scss';
+
+.container {
+    border: 2px dashed $border-input;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+        background-color: $task-item-hover;
+        border: 2px dashed transparent;
+    }
+
+    .checkboxContainer {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-left: 42px;
+        cursor: pointer;
+        user-select: none;
+
+        /* Esconde o checkbox padrão */
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        /* Estilo quando o checkbox estiver marcado */
+        input:checked ~ .checkmark {
+          background-color: $background-checkbox;
+          border-color: $border-checkbox;
+        }
+
+        /* Estiliza o ícone de checkmark */
+        .checkmark:after {
+          left: 8px;
+          top: 3px;
+          width: 6px;
+          height: 12px;
+          border: solid $border-checkbox;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+      
+      /* Cria a "caixa" personalizada */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color: transparent;
+        border: 2px solid $border-input;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+
+        /* Adiciona o ícone de checkmark */
+        &:after {
+          content: "";
+          position: absolute;
+          display: none;
+  
+        }
+      }
+      
+      /* Mostra o ícone de checkmark quando o checkbox estiver marcado */
+      .checkboxContainer input:checked ~ .checkmark:after {
+        display: block;
+      } 
+
+    > button {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+}

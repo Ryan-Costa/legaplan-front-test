@@ -1,0 +1,28 @@
+$white: #ffffff;
+$black: #000000;
+$black-opacity: rgba(0, 0, 0, 0.54);
+$primary-color: #0796d3;
+$secondary-color: #e7eefb;
+$border-color: #eaecf0;
+$icon-color: #b0bbd1;
+$border-input: #d7dde9;
+$task-item-hover: #F7F9FD;
+$background-checkbox: #a0dcf6;
+$border-checkbox: #0796d3;
+$box-shadow: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+
+
+:export {
+    white: $white;
+    black: $black;
+    blackOpacity: $black-opacity;
+    primaryColor: $primary-color;
+    secondaryColor: $secondary-color;
+    borderColor: $border-color;
+    iconColor: $icon-color;
+    borderInput: $border-input;
+    taskItemHover: $task-item-hover;
+    backgroundCheckbox: $background-checkbox;
+    borderCheckbox: $border-checkbox;
+    shadow: $box-shadow;
+}
