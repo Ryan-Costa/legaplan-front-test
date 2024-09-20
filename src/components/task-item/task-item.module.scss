@@ -6,6 +6,7 @@
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 
     &:hover {
         background-color: $task-item-hover;
@@ -44,6 +45,7 @@
 
         .title {
           word-break: break-word;
+          text-transform: capitalize;
         }
 
         .completed {
