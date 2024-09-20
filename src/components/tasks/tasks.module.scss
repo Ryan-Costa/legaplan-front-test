@@ -5,6 +5,10 @@
     width: 100%;
     max-width: 450px;
     margin-inline: auto;
+
+    @media (min-width: 768px) {
+        margin-block: 2.5rem;
+    }
 }
 
 .container {

@@ -6,20 +6,55 @@
     gap: 0.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 2px solid $border-color;
+   
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .logomark {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    
+    @media (min-width: 768px) {
+        min-width: 15rem;
+    }
 }
 
 .title {
     color: $black;
     font-weight: 500;
+
+    @media (min-width: 768px) {
+        text-align: center;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 1.5rem;
+    }
 }
 
 .subtitle {
     color: $black-opacity;
     font-weight: 400;
+    
+    @media (min-width: 768px) {
+        text-align: right;
+        
+        span {
+            display: block;
+        }
+    }
+
+    @media (min-width: 992px) {
+        min-width: 15rem;
+
+        span {
+            display: inline-flex;
+        }
+    }
 }

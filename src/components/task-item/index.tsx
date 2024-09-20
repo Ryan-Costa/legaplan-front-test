@@ -30,7 +30,9 @@ const TaskItem = ({ title, task }: TaskItemProps) => {
           type="checkbox"
         />
         <span className={styles.checkmark}></span>
-        <span className={`${task.completed && styles.completed}`}>{title}</span>
+        <p className={`${styles.title} ${task.completed && styles.completed}`}>
+          {title}
+        </p>
       </label>
       <button onClick={openConfirmationModal}>
         <TrashIcon />

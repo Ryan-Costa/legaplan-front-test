@@ -24,25 +24,36 @@ const Tasks = ({ tasks: initialTask }: ListTasksProps) => {
   return (
     <div className={styles.outside}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Suas tarefas de hoje</h2>
+        {tasks.length > 0 &&
+        tasks.filter((task) => !task.completed).length > 0 ? (
+          <>
+            <h2 className={styles.title}>Suas tarefas de hoje</h2>
+            <div className={styles.tasks}>
+              {tasks
+                .filter((task) => !task.completed)
+                .map((task) => (
+                  <TaskItem key={task.id} title={task.title} task={task} />
+                ))}
+            </div>
+          </>
+        ) : (
+          tasks.length === 0 && (
+            <h2 className={styles.title}>Adicione uma tarefa</h2>
+          )
+        )}
 
-        <div className={styles.tasks}>
-          {tasks
-            ?.filter((task) => !task.completed)
-            .map((task) => (
-              <TaskItem key={task.id} title={task.title} task={task} />
-            ))}
-        </div>
-
-        <h2 className={styles.title}>Tarefas finalizadas</h2>
-
-        <div className={styles.tasks}>
-          {tasks
-            .filter((task) => task.completed)
-            .map((task) => (
-              <TaskItem key={task.id} title={task.title} task={task} />
-            ))}
-        </div>
+        {tasks.filter((task) => task.completed).length > 0 && (
+          <>
+            <h2 className={styles.title}>Tarefas finalizadas</h2>
+            <div className={styles.tasks}>
+              {tasks
+                .filter((task) => task.completed)
+                .map((task) => (
+                  <TaskItem key={task.id} title={task.title} task={task} />
+                ))}
+            </div>
+          </>
+        )}
       </div>
 
       <ButtonAction

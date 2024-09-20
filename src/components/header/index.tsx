@@ -1,7 +1,10 @@
 import Image from "next/image";
 import styles from "./header.module.scss";
+import { formatDate } from "@/helper/formatDate";
 
 const Header = () => {
+  const date = new Date();
+  const { weekday, dayMonthYear } = formatDate(date);
   return (
     <header className={styles.header}>
       <div className={styles.logomark}>
@@ -10,7 +13,9 @@ const Header = () => {
       </div>
 
       <h3 className={styles.title}>Bem-vindo de volta, Marcus</h3>
-      <h4 className={styles.subtitle}>Segunda, 01 de dezembro de 2025</h4>
+      <h4 className={styles.subtitle}>
+        {weekday}, <span>{dayMonthYear}</span>
+      </h4>
     </header>
   );
 };

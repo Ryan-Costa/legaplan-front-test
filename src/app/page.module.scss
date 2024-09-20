@@ -1,4 +1,10 @@
 .main {
     height: 100vh;
-    padding: 1.5rem
+    padding: 1.5rem;
+
+    @media (min-width: 992px) {
+        padding-inline: 3.5rem;
+    }
+
+    
 }
